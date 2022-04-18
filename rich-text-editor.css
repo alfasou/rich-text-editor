@@ -1,0 +1,185 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	background-color: #ffaac7;
+	font-family: 'Tahoma', 'Helvetica', 'Quicksand', 'Arial', sans-serif;
+	color: #f85991;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.wrapper {
+	background-color: #fff;
+	width: 50%;
+	height: auto;
+	padding-left: 10pt;
+	padding-right: 10pt;
+	padding-top: 20pt;
+	border-radius: 10px;
+	box-shadow: 0px 0px 40px rgba(0,0,0,0.1);
+}
+
+h1 {
+	margin: 0;
+	padding-bottom: 5pt;
+	border-bottom: 1px solid #ffaac7;
+}
+
+::placeholder {
+	color: #f85991;
+}
+
+.title {
+	font-size: xx-large;
+	font-weight: 900;
+}
+
+.subtitle {
+	font-size: medium;
+}
+
+input[type="text"] {
+	height: 20pt;
+	width: 100%;
+	padding: 0;
+	border: 0;
+	outline: none;
+	margin-top: 5pt;
+}
+
+.options {
+	width: 100%;
+	height: 30pt;
+	margin-top: 5pt;
+	border-top: 1px solid #ffaac7;
+	border-bottom: 1px solid #ffaac7;
+}
+
+
+iframe {
+	border: 0;
+	width: 100%;
+	margin-bottom: 5pt;
+	height: 250pt;
+}
+
+.seperator {
+	display: inline;
+	border-left: 1px solid #ffaac7;
+	height: 30pt;
+}
+
+button {
+	margin: 0;
+	padding: 0;
+	height: 30pt;
+	width: 19pt;
+	background-color: #fff;
+	border: 0;
+	cursor: pointer;
+	color: #f85991;
+}
+
+label {
+	margin: 0;
+	padding: 5px;
+	height: 30pt;
+	width: 19pt;
+	background-color: #fff;
+	border: 0;
+	cursor: pointer;
+	color: #f85991;
+}
+
+button.btn {
+	width: 80px;
+	float: right;
+	font-weight: 600;
+	margin: 50px 20px;
+	background-color: #fcd1df;
+	border-radius: 6px;
+}
+
+button.btn:hover {
+	background-color: #ffaac7;
+}
+
+select {
+	height: 30pt;
+	-webkit-appearance: none;
+	border: 0;
+	padding-right: 5pt;
+	outline: none;
+	color: #f85991;
+}
+
+input[type="number"] {
+	height: 30pt;
+	width: 20pt;
+	border: 0;
+	padding: 0;
+	padding-left: 5pt;
+	padding-right: 5pt;
+	outline: none;
+}
+
+.hidden {
+	display: none;
+}
+
+.fontNum {
+	width: 30px;
+}
+
+.fontSelect {
+	background-color: #fff;
+	width: 90px;
+	padding-left: 5pt;
+}
+
+input {
+	color: #f85991;
+}
+
+.tag-container {
+	display: flex;
+	flex-flow: row wrap;
+	width: 80%;
+}
+  
+.tag{
+	pointer-events: none;
+	background-color: #ffaac7;
+	color: #f85991;
+	padding: 8px;
+	margin: 10px 5px;
+	border-radius: 20px;
+	font-size: 10pt;
+}
+
+.tag::before {
+	pointer-events: all;
+	display: inline-block;
+	content: 'x';  
+	height: 20px;
+	width: 20px;
+	margin-right: 6px;
+	text-align: center;
+	color: #f85991;
+	background-color: #fff;
+	cursor: pointer;
+	border-radius: 50%;
+	font-size: 10pt;
+}
+
+.hashtagsWrap {
+	margin-bottom: 80px;
+	max-height: 100px;
+	overflow: hidden;
+}
+  
