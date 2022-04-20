@@ -65,7 +65,7 @@ iframe {
 	border: 0;
 	width: 100%;
 	margin-bottom: 5pt;
-	height: 500px;
+	height: 250pt;
 }
 
 .separator {
@@ -118,6 +118,10 @@ select {
 	color: #f85991;
 }
 
+.categorySelect {
+  width: 100%;
+}
+
 select option[value="white"]{
 	background-color: white;
 }
@@ -140,6 +144,9 @@ select option[value="#6600EA"]{
 	background-color: #6600EA;
 }
 
+option::data-icon {
+  content: '\f55d';
+}
 input[type="number"] {
 	height: 30pt;
 	width: 20pt;
@@ -214,7 +221,7 @@ input {
 
 @media (max-width: 795px)
 {
-  .toolbar
+  .ttop
    {
     height: 100pt;
    }
