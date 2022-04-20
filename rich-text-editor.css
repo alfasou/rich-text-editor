@@ -52,7 +52,7 @@ input[type="text"] {
 	margin-top: 5pt;
 }
 
-.options {
+.toolbar {
 	width: 100%;
 	height: 30pt;
 	margin-top: 5pt;
@@ -65,10 +65,10 @@ iframe {
 	border: 0;
 	width: 100%;
 	margin-bottom: 5pt;
-	height: 250pt;
+	height: 500px;
 }
 
-.seperator {
+.separator {
 	display: inline;
 	border-left: 1px solid #ffaac7;
 	height: 30pt;
@@ -118,6 +118,28 @@ select {
 	color: #f85991;
 }
 
+select option[value="white"]{
+	background-color: white;
+}
+select option[value="#0059D2"]{
+	background-color:#0059D2;
+}
+select option[value="#DE002F"]{
+	background-color: #DE002F;
+}
+select option[value="#65BD00"]{
+	background-color: #65BD00;
+}
+select option[value="yellow"]{
+	background-color: yellow;
+}
+select option[value="black"]{
+	background-color: black;
+}
+select option[value="#6600EA"]{
+	background-color: #6600EA;
+}
+
 input[type="number"] {
 	height: 30pt;
 	width: 20pt;
@@ -132,14 +154,12 @@ input[type="number"] {
 	display: none;
 }
 
-.fontNum {
-	width: 30px;
+.fontAtt {
+	padding-left: 5pt;
 }
 
-.fontSelect {
-	background-color: #fff;
-	width: 90px;
-	padding-left: 5pt;
+.fontNum {
+	width: 30px;
 }
 
 input {
@@ -182,4 +202,20 @@ input {
 	max-height: 100px;
 	overflow: hidden;
 }
-  
+
+
+@media (max-width: 1500px)
+{
+  .ttop
+   {
+    height: 70pt;
+   }
+}
+
+@media (max-width: 795px)
+{
+  .toolbar
+   {
+    height: 100pt;
+   }
+}

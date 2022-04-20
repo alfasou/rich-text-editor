@@ -36,7 +36,4 @@ input.addEventListener('keyup', () => {
 
 });
 
-if (hashtagArray >= 5) {
-  hashtagArray.slice(0, 5)
-};
 

@@ -1,21 +1,22 @@
 <!doctype html>
 <html>
 <head>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
 	<link rel="stylesheet" href="rich-text-editor.css">
 </head>
 <body onload="enableEditMode()"></body>
 <div class="wrapper">
 	<div class="hidden">
-		<input type="file" name="imageupload" accept="image/*" id="imageupload">
+		<input type="file" name="imageUpload" accept="image/*" id="imageUpload">
 	</div>
 
-
+	<!-- Title and Subtitle -->
 	<input type="text" placeholder="T&iacute;tulo" class="title">
 	<h1></h1>
 	<input type="text" placeholder="SubT&iacute;tulo" class="subtitle">
 
-	<div class="options">
+	<!-- Toolbar -->
+	<div class="toolbar ttop">
 		<button onClick="Edit('bold')" title="Negrito">
 			<i class="fas fa-bold"></i>
 		</button>
@@ -28,7 +29,7 @@
 		<button onClick="Edit('underline')" title="Sublinhado">
 			<i class="fas fa-underline"></i>
 		</button>
-		<div class="seperator"></div>
+		<div class="separator"></div>
 		<button onClick="Edit('justifyLeft')" title="Justificado &agrave; Esquerda">
 			<i class="fas fa-align-left"></i>
 		</button>
@@ -41,23 +42,46 @@
 		<button onClick="Edit('justifyFull')" title="Texto Justificado">
 			<i class='fa fa-align-justify'></i>
 		</button>
-		<div class="seperator"></div>
+		<div class="separator"></div>
 		<button onClick="Edit('insertOrderedList')" title="Lista Ordenada">
 			<i class="fas fa-list-ol"></i>
 		</button>
 		<button onClick="Edit('insertUnorderedList')" title="Lista N&atilde;o Ordenada">
 			<i class="fas fa-list-ul"></i>
 		</button>
-		<div class="seperator"></div>
+		<div class="separator"></div>
 		<button onClick="Edit('indent')" title="Indent">
 			<i class='fa fa-indent'></i>
 		</button>
 		<button onClick="Edit('outdent')" title="Outdent">
 			<i class='fa fa-outdent'></i>
 		</button>
-		<div class="seperator"></div>
-		<select class="fontSelect" onChange="execVal('fontName', this.value)">
-			<option hidden default>Font</option>
+		<button onClick="Edit('insertHorizontalRule')" title="Inserir Barra Horizontal">
+			&horbar;
+		</button>
+		<div class="separator"></div>
+		<select class="backColor fontAtt" onChange="execVal('backColor', this.value)">
+			<option hidden default>&#9617;&#119808;&#9617;</option>
+			<option value="white"></option>
+			<option value="#0059D2"></option>
+			<option value="#DE002F"></option>
+			<option value="#65BD00"></option>
+			<option value="yellow"></option>
+			<option value="black"></option>
+		</select>
+		<div class="separator"></div>
+		<select class="fontColor fontAtt" onChange="execVal('foreColor', this.value)">
+			<option hidden default>&#10240;&#119808;&#10240;</option>
+			<option value="black"></option>
+			<option value="#0059D2"></option>
+			<option value="#DE002F"></option>
+			<option value="#65BD00"></option>
+			<option value="#6600EA"></option>
+			<option value="white"></option>
+		</select>
+		<div class="separator"></div>
+		<select class="fontSelect fontAtt" onChange="execVal('fontName', this.value)">
+			<option hidden default>Fonte</option>
 			<option value="Times New Roman">Times</option>
 			<option value="Arial">Arial</option>
 			<option value="Courier New">Courier New</option>
@@ -65,48 +89,51 @@
 			<option value="Verdana">Verdana</option>
 			<option value="Helvetica">Helvetica</option>
 		</select>
-		<div class="seperator"></div>
+		<div class="separator"></div>
 			<input type="number" class="fontNum" onChange="execVal('fontSize', this.value)" value="3" max="7" min="1"></input>
-		<div class="seperator"></div>
-		<button onclick="Edit('createLink',prompt('Enter a URL: http://'))" title="Inserir Link">
+		<div class="separator"></div>
+		<button onclick="execVal('createLink',prompt('insira uma URL v&aacute;lida', 'http://'))" title="Inserir Link">
 			<i class="fas fa-link"></i>
 		</button>
 		<button onClick="Edit('unLink')" title="Desfazer Link">
 			<i class="fas fa-unlink"></i>
 		</button>
-		<div class="seperator"></div>
-		<label for="imageupload" title="Inserir Imagem">
+		<div class="separator"></div>
+		<label for="imageUpload" title="Inserir Imagem">
 			<i class="fas fa-image"></i>
 		</label>
-		<div class="seperator"></div>
-		<button onClick="Edit('viewCode')" title="HTML">
+		<div class="separator"></div>
+		<button onClick="Edit('styleWithCSS')" title="Editar HTML">
 			<i class="fa fa-code"></i>
 		</button>
 	</div>
+	<!-- Toolbar End -->
 
-	<div class="lineNumber"></div>
-	<iframe name="richTextField" id="editor" contenteditable="true">
+	<!-- Text Box -->
+	<iframe name="richTextField" id="textBox" contenteditable="true">
 	</iframe>
 
-	<div class="options">
+
+	<div class="toolbar">
+		<!-- Category Selector -->
 		<select class="categorySelect">
 			<option hidden default>Escolha a Categoria da Publica&ccedil;&atilde;o</option>
 			<option value="Noticias">Not&iacute;cias</option>
 			<option value="Dicas">Dicas</option>
 			<option value="Novidades">Novidades</option>
 		</select>
+		<!-- Hashtags Field -->
 		<div class="hashtagsWrap">
 			<input type="text" id="hashtags" autocomplete="off" placeholder="Aperte Enter para inserir cada Tag">
 			<div class="tag-container"></div>
 		</div>
-
 	</div>
 
+	<!-- Submit Button -->
 	<button type="submit" class="btn btn-primary">Submit</button>
+
 </div>
 
 </body>
-   
-   <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
    <script  src="rich-text-editor.js"></script>
 </html>
