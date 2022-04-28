@@ -61,7 +61,7 @@ input[type="text"] {
 }
 
 
-iframe {
+#textBox {
 	border: 0;
 	width: 100%;
 	margin-bottom: 5pt;
@@ -72,6 +72,7 @@ iframe {
 	display: inline;
 	border-left: 1px solid #ffaac7;
 	height: 30pt;
+	margin: 0 2pt;
 }
 
 button {
@@ -116,12 +117,23 @@ select {
 	padding-right: 5pt;
 	outline: none;
 	color: #f85991;
+	cursor: pointer;
 }
 
 .categorySelect {
-  width: 100%;
+  	width: 100%;
 }
-
+select.backColor{
+  	background-color: pink;
+  	height: 18pt;
+  	width: 25pt;
+  	padding: 0 9pt;
+  	margin: 0 2pt;
+	border-radius: 5px;
+}
+select.fontColor{
+  	width: 25pt;
+}
 select option[value="white"]{
 	background-color: white;
 }
@@ -144,9 +156,6 @@ select option[value="#6600EA"]{
 	background-color: #6600EA;
 }
 
-option::data-icon {
-  content: '\f55d';
-}
 input[type="number"] {
 	height: 30pt;
 	width: 20pt;
@@ -181,9 +190,9 @@ input {
   
 .tag{
 	pointer-events: none;
-	background-color: #ffaac7;
+	background-color: #fcd1df;
 	color: #f85991;
-	padding: 8px;
+	padding: 8px 15px 8px 10px;
 	margin: 10px 5px;
 	border-radius: 20px;
 	font-size: 10pt;

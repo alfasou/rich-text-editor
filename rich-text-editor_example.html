@@ -66,8 +66,8 @@
 				&horbar;
 			</button>
 			<div class="separator"></div>
-			<select class="backColor fontAtt" onChange="execVal('backColor', this.value)">
-				<option hidden default>&#9617;&#119808;&#9617;</option>
+			<select class="backColor fontAtt" onChange="execVal('backColor', this.value)" title="Cor do Fundo">
+				<option hidden default>&#119808;</option>
 				<option value="white"></option>
 				<option value="#0059D2"></option>
 				<option value="#DE002F"></option>
@@ -75,8 +75,7 @@
 				<option value="yellow"></option>
 				<option value="black"></option>
 			</select>
-			<div class="separator"></div>
-			<select class="fontColor fontAtt" onChange="execVal('foreColor', this.value)">
+			<select class="fontColor fontAtt" onChange="execVal('foreColor', this.value)" title="Cor da Fonte">
 				<option hidden default>&#10240;&#119808;&#10240;</option>
 				<option value="black"></option>
 				<option value="#0059D2"></option>
@@ -108,7 +107,6 @@
 			<label for="imageUpload" title="Inserir Imagem">
 				<i class="fas fa-image"></i>
 			</label>
-			<div class="separator"></div>
 			<button onClick="Edit('pre')" title="Editar HTML">
 				<i class="fa fa-code"></i>
 			</button>
